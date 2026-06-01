@@ -161,11 +161,6 @@ err = client.Models.Copy(ctx, ollama.ModelCopyParams{
 err = client.Models.Delete(ctx, ollama.ModelDeleteParams{
 	Model: "gemma3-backup",
 })
-
-_ = models
-_ = running
-_ = details
-_ = status
 ```
 
 ## Embeddings

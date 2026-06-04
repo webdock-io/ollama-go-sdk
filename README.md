@@ -75,6 +75,20 @@ client, err := ollama.NewClient(
 )
 ```
 
+## Custom HTTP Client
+
+Pass `WithHTTPClient` when you need custom timeouts, transports, proxies, or other `net/http` behavior.
+
+```go
+httpClient := &http.Client{
+	Timeout: 30 * time.Second,
+}
+
+client, err := ollama.NewClient(
+	ollama.WithHTTPClient(httpClient),
+)
+```
+
 ## Chat
 
 ```go

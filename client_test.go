@@ -87,6 +87,7 @@ func TestWithHTTPClientUsesCustomClientForStreaming(t *testing.T) {
 `), nil
 		}),
 	}
+
 	client, err := NewClient(
 		WithBaseURL("https://ollama.test/api"),
 		WithHTTPClient(customClient),
